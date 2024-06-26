@@ -18,9 +18,8 @@ while True:
     n4 = randint(1, 60)
     n5 = randint(1, 60)
     n6 = randint(1, 60)
-    n7 = randint(1, 60)
     
-    numbers = (n1, n2, n3, n4, n5, n6, n7)
+    numbers = (n1, n2, n3, n4, n5, n6)
 
     # Filtro I: Filtros repetidos no sorteio
 
@@ -39,54 +38,35 @@ while True:
                     if n1 == n6:
                         d = False
                     else:
-                        if n1 == n7:
+                        if n2 == n3:
                             d = False
                         else:
-                            if n2 == n3:
+                            if n2 == n4:
                                 d = False
                             else:
-                                if n2 == n4:
+                                if n2 == n5:
                                     d = False
                                 else:
-                                    if n2 == n5:
+                                    if n2 == n6:
                                         d = False
                                     else:
-                                        if n2 == n6:
-                                            d = False
+                                        if n3 == n4:
+                                                d = False
                                         else:
-                                            if n2 == n7:
+                                            if n3 == n5:
                                                 d = False
                                             else:
-                                                if n3 == n4:
+                                                if n3 == n6:
                                                     d = False
                                                 else:
-                                                    if n3 == n5:
+                                                    if n4 == n5:
                                                         d = False
                                                     else:
-                                                        if n3 == n6:
+                                                        if n4 == n6:
                                                             d = False
                                                         else:
-                                                            if n3 == n7:
+                                                            if n5 == n6:
                                                                 d = False
-                                                            else:
-                                                                if n4 == n5:
-                                                                    d = False
-                                                                else:
-                                                                    if n4 == n6:
-                                                                        d = False
-                                                                    else:
-                                                                        if n4 == n7:
-                                                                            d = False
-                                                                        else:
-                                                                            if n5 == n6:
-                                                                                d = False
-                                                                            else:
-                                                                                if n5 == n7:
-                                                                                    d = False
-                                                                                else:
-                                                                                    if n6 == n7:
-                                                                                        d = False
-
     if d == True:
         num.append(numbers)
     
