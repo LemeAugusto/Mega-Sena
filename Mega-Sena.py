@@ -1,7 +1,7 @@
 from random import randint
 import os
 
-num = []
+lista_de_jogos = []
 
 while True:
     os.system('cls')
@@ -19,7 +19,7 @@ while True:
     n5 = randint(1, 60)
     n6 = randint(1, 60)
     
-    numbers = (n1, n2, n3, n4, n5, n6)
+    sorteios = (n1, n2, n3, n4, n5, n6)
 
     # Filtro I: Filtros repetidos no sorteio
 
@@ -68,16 +68,16 @@ while True:
                                                             if n5 == n6:
                                                                 d = False
     if d == True:
-        num.append(numbers)
+        lista_de_jogos.append(sorteios)
     
     # Filtro II: Sorteios idênticos
 
-    num_tuplas = set(num)
-    num2 = list(num_tuplas)
-    num = num2
-    print(num)
+    lista_de_jogos_tupla = set(lista_de_jogos)
+    sorteios2 = list(lista_de_jogos_tupla)
+    sorteios = sorteios2
+    print(sorteios)
 
     # Finalizar o script automaticamente
 
-    if len(num) == 50063860:
+    if len(sorteios) == 50063860:
         break
