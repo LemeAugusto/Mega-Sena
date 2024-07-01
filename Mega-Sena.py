@@ -1,7 +1,7 @@
 from random import randint
 import os
 
-num = []
+jogos = []
 while True:
     os.system('cls')
     lista = []
@@ -10,18 +10,16 @@ while True:
         sorteio = randint(1, 61)
         lista.append(sorteio)
     
-    a = lista     # Deletar jogos idênticos
-    b = set(lista)
-    if len(b) < len(a):
+    if len(lista) != len(set(lista)):    # Deletar sorteios idêntico
         del lista
         continue
-    lista = tuple(lista)
-    num.append(lista)
+    lista = tuple(lista)    # Conversão necessária
+    jogos.append(lista)
     
-    num_tuplas = set(num)    # Deletar sorteios idênticos
-    num2 = list(num_tuplas)
-    num = num2
-    print(num)
+    jogos_tuplas = set(jogos)    # Deletar jogos idênticos
+    jogos_clone = list(jogos_tuplas)
+    jogos = jogos_clone
+    print(jogos)
 
-    if len(num) == 50063860:    # Finalizar o script automaticamente
+    if len(jogos) == 50063860:    # Finalizar automaticamente
         break
