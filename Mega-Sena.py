@@ -15,12 +15,10 @@ while True:
     if len(b) < len(a):
         del lista
         continue
-
     lista = tuple(lista)
     num.append(lista)
     
     num_tuplas = set(num)    # Deletar sorteios idênticos
-
     num2 = list(num_tuplas)
     num = num2
     print(num)
